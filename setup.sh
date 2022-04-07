@@ -28,7 +28,7 @@ az network nsg rule create -g $RgName --nsg-name bePortalNSG -n AllowAll80 --pri
 
 
 # Create the NIC
-for i in `seq 1 2`; do
+for i in `seq 1 3`; do
   echo '------------------------------------------'
   echo 'Creating webNic'$i
   az network nic create \
@@ -47,8 +47,8 @@ az vm availability-set create \
     --resource-group $RgName \
     --name portalAvailabilitySet
 
-# Create 2 VM's from a template
-for i in `seq 1 2`; do
+# Create 3 VM's from a template
+for i in `seq 1 3`; do
     echo '------------------------------------------'
     echo 'Creating webVM'$i
     az vm create \
