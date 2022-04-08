@@ -118,6 +118,13 @@ echo '--------------------------------------------------------'
       --name ipconfig1 \
       --lb-name myLoadBalancer \
       --lb-address-pools myBackEndPool
+      
+  az network nic ip-config update \
+      --resource-group $RgName \
+      --nic-name webNic3 \
+      --name ipconfig1 \
+      --lb-name myLoadBalancer \
+      --lb-address-pools myBackEndPool
 
   az network public-ip show \
       --resource-group $RgName \
